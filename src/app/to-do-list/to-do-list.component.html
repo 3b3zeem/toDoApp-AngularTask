@@ -1,0 +1,17 @@
+<ul>
+    @for (todo of todos; track todo.id; let i = $index) {
+      <li>
+        <span [class.completed]="todo.completed">
+          ID: {{ todo.id }} --- {{ todo.text }}
+        </span>
+        <div class="actions">
+          <button (click)="onDeleteTask(i)">Delete</button>
+          @if (todo.completed) {
+            <button (click)="onCompleteTask(i)">UnComplete</button>
+          } @else {
+            <button (click)="onCompleteTask(i)">Complete</button>
+          }
+        </div>
+      </li>
+    }
+  </ul>

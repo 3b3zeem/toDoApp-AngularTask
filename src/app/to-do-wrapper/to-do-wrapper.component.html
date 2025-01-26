@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">To Do App</h1>
+  <app-to-do-form (addTask)="addTask($event)"></app-to-do-form>
+  <app-to-do-list
+    [todos]="todos"
+    (deleteTask)="deleteTask($event)"
+    (completeTask)="completeTask($event)"
+  ></app-to-do-list>
+</div>

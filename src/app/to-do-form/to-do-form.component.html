@@ -1,0 +1,12 @@
+<div class="add-task">
+  <input
+    type="text"
+    [(ngModel)]="newTask"
+    placeholder="Add New To-Do..."
+    (keyup.enter)="onAddTask()"
+  />
+  <button (click)="onAddTask()">Add</button>
+</div>
+@if (showError) {
+  <p class="error-message">Please enter a task!</p>
+}
